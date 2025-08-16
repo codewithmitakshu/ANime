@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins,sens-serif";
+    color: #fff;
+}
+
+body {
+    background: linear-gradient(35deg, #0f0a0a, 70%, red);
+    height: 100vh;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 32px 10%;
+}
+
+.header img {
+    height: 100px;
+    scale: .9;
+    filter: saturate(3);
+}
+
+.header img:hover {
+    filter: saturate(3);
+    scale: 1;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 35px;
+    font-size: 19px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar a::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #f00;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: .5s ease;
+    opacity: 0;
+    z-index: -1;
+}
+
+.navbar a:hover::before {
+    top: 0;
+    opacity: 1px;
+}
+
+section {
+    padding: 10rem 9% 2rem;
+    height: 100vh;
+    width: 100%;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+
+.home .text-content h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+
+.home .text-content span {
+    font-size: 32px;
+    color: #c90707;
+}
+
+.home .text-content p {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.button {
+    margin: 20px 0;
+}
+
+.btn {
+    height: 45px;
+    width: 150px;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #f00;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    left: 0;
+    top: -100%;
+
+    background: linear-gradient(#0f0a0a, red,
+            #0f0a0a,
+            red);
+    transition: .5s ease;
+    z-index: -1;
+}
+
+.btn:hover:before {
+    top: 0;
+}
+
+.home .imageSet1 img {
+    height: 400px;
+    position: absolute;
+    transform: translateX(-150%);
+    margin-left: 150px;
+    animation: PopUp 1s ease forwards;
+    overflow: hidden;
+display: block;
+    filter: drop-shadow(0 0 5px #f00);
+}
+
+@keyframes PopUp {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+} 
+
+
+.imageSet1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.imageSet1 img:nth-child(2) {
+    left: -150px;
+    z-index: -2;
+    scale: 0;
+    animation-delay: .5s;
+}
+
+.imageSet1 img:nth-child(3) {
+    left: 214px;
+    z-index: -2;
+    animation-delay: 2s;
+}
+
+.imageSet1 img:nth-child(4) {
+    left: 173px;
+    z-index: -2;
+    animation-delay: 1.5s;
+}
+
+.imageSet1 img:nth-child(5) {
+    left: -68px;
+    z-index: -3;
+    top: -282px;
+    animation-delay: 1s;
+}
+
+.imageSet1 img:nth-child(6) {
+    left: 145px;
+    z-index: -4;
+    top: -323px;
+    height: 500px;
+    animation-delay: 2.5s;
+}
+
+.about {
+    background: linear-gradient(35deg, #0f0a0a, 70%, red);
+
+}
+
+.heading {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.heading span {
+    color: #f00;
+}
+
+.content img {
+    height: 400px;
+    filter: drop-shadow(0 0 5px #f00);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .text h2 {
+    font-size: 32px;
+    text-align: left;
+    font-weight: 550;
+}
+
+.content .text h3{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.content .text p{
+    max-width: 700px;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.Member{
+    background: linear-gradient(35deg,#0f0a0a,70%,red);
+}
+
+.stream{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.image-information img{
+    height: 100px;
+    transform: .5s ease;
+}
+.image-information:hover img{
+    height: 150px;
+}
+
+.image-content{
+    display: flex;
+    margin-left: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-content .image-information{
+  height: 400px;
+  width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  /* padding: 20px;
+  margin-left:35px; */
+}
+
+.image-information p{
+    font-size: 15px;
+    margin: 30px 0;
+}
+
+.footer{
+    background: #0f0a0a;
+    display: flex;
+    justify-content: center;
+    padding: 32px 9%;
+}
+
+.footer p{
+    font-size: 13px;
+    text-align: center;
+}
